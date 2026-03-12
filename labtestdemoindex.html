@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>labtestdemo.xyz — Zscaler Inc Videos</title>
+  <meta name="description" content="Demo site showcasing videos from Zscaler Inc's YouTube channel." />
+  <style>
+    :root { --fg:#0b1526; --bg:#ffffff; --acc:#0066ff; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; color:var(--fg); background:var(--bg);}
+    header { padding: 32px 20px; border-bottom:1px solid #e6e8eb; }
+    .wrap { max-width: 1100px; margin:0 auto; padding:0 16px; }
+    h1 { margin:0 0 8px; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+    .tag { display:inline-block; padding:4px 10px; border-radius:999px; background:#eef4ff; color:#0a3ea1; font-weight:600; font-size:0.9rem;}
+    main { padding: 28px 20px 56px; }
+    section { margin: 28px 0; }
+    h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); margin: 0 0 12px; }
+    p { margin: 0 0 16px; max-width: 70ch; line-height: 1.5; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px; }
+    .card { border:1px solid #e6e8eb; border-radius:12px; padding:12px; background:#fff; }
+    .ratio { position: relative; width:100%; padding-top:56.25%; border-radius:8px; overflow:hidden; background:#000; }
+    .ratio iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    footer { padding: 24px 20px; border-top:1px solid #e6e8eb; color:#6b7280; font-size: 0.9rem;}
+    a { color: var(--acc); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="tag">labtestdemo.xyz</span>
+      <h1>Zscaler Inc — Video Showcase</h1>
+      <p>Selected videos from the official Zscaler Inc YouTube channel.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Latest uploads (playlist)</h2>
+      <p>This embedded playlist pulls recent videos from Zscaler Inc.</p>
+      <div class="card">
+        <div class="ratio">
+          <!-- Zscaler Inc channel uploads playlist -->
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=UUSylwuqCXM_W13ARfzASm3Q"
+            title="Zscaler Inc Uploads"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <p style="margin-top:10px;">Visit the channel: <a href="https://www.youtube.com/channel/UCSylwuqCXM_W13ARfzASm3Q" target="_blank" rel="noopener">Zscaler Inc on YouTube</a>.</p>
+    </section>
+
+    <section>
+      <h2>Spotlight videos</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="ratio">
+            <!-- A 5-minute look at the Zscaler cloud security platform -->
+            <iframe
+              src="https://www.youtube.com/embed/WMtIncM0a-w"
+              title="A 5-minute look at the Zscaler cloud security platform"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ratio">
+            <!-- Zscaler for Users Demo -->
+            <iframe
+              src="https://www.youtube.com/embed/p1bzkAEZ_oc"
+              title="Zscaler for Users Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div>© <span id="year"></span> labtestdemo.xyz. Videos are property of Zscaler Inc / YouTube. This site is for demo purposes.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
